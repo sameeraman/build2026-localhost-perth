@@ -307,6 +307,52 @@
     .speaker-card h3 { font-size: 0.95rem; font-weight: 600; }
     .speaker-card p { font-size: 0.82rem; color: var(--ms-muted); margin-top: 0.25rem; }
 
+    /* ── LOCATION ── */
+    #location { background: #fff; }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .location-info h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--ms-dark); }
+    .location-info p { font-size: 1rem; color: #333; line-height: 1.7; }
+    .location-info .address-line { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .location-info .address-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    .location-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #e0e0e0;
+      min-height: 300px;
+    }
+
+    .location-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    .directions-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: var(--ms-blue);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .directions-btn:hover { background: #005a9e; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .location-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── LINKS ── */
     #links { background: var(--ms-light); }
 
@@ -373,6 +419,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#agenda">Agenda</a></li>
       <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#location">Location</a></li>
       <li><a href="#links">Links</a></li>
     </ul>
   </nav>
@@ -386,7 +433,7 @@
     <div class="meta-badges">
       <div class="badge">📅 Saturday, 20 June 2026</div>
       <div class="badge">🕘 9:00 AM – 4:00 PM AWST</div>
-      <div class="badge">📍 Microsoft Office, Level 10/100 St Georges Terrace, Perth WA 6000</div>
+      <div class="badge">📍 Microsoft Office Perth, Australia</div>
       <div class="badge">🆓 Free Event</div>
     </div>
 
@@ -576,6 +623,31 @@
           <h3>Deepak Maheshwari</h3>
           <p>Cloud Solution Architect, Microsoft</p>
           <p style="margin-top:0.5rem; font-size:0.8rem; color: var(--ms-blue);">BRK230 — Build Smarter AI Systems in Foundry as Models &amp; Costs Evolve</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="container">
+      <h2>Location</h2>
+      <p class="section-sub">Join us at the Microsoft Office in Perth.</p>
+      <div class="location-grid">
+        <div class="location-info">
+          <h3>Microsoft Office Perth</h3>
+          <div class="address-line">
+            <span class="address-icon">📍</span>
+            <p>Level 10, 100 St Georges Terrace<br>Perth WA 6000<br>Australia</p>
+          </div>
+          <div class="address-line">
+            <span class="address-icon">🕘</span>
+            <p>Saturday, 20 June 2026<br>9:00 AM – 4:00 PM AWST</p>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Level+10+100+St+Georges+Terrace+Perth+WA+6000" target="_blank" class="directions-btn">Get Directions →</a>
+        </div>
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.5!2d115.8589!3d-31.9535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32bad5c00fb829%3A0x79a514b3024f3a04!2s100%20St%20Georges%20Terrace%2C%20Perth%20WA%206000!5e0!3m2!1sen!2sau!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
